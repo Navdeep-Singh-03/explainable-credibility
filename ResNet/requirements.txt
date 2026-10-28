@@ -1,0 +1,5 @@
+# torch and torchvision MUST come from the same build (e.g. both CUDA) -- see README.
+torch>=2.0
+torchvision>=0.15
+pillow>=9
+pandas>=1.5

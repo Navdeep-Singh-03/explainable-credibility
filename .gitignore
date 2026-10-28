@@ -1,0 +1,27 @@
+# Python environment and generated files
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+
+# Secrets and local runtime state
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+evidence_cache.sqlite*
+
+# Dataset and downloaded images (obtain Fakeddit from its official source)
+fakeddit_sample/
+images/
+
+# Local model artifacts (large; download or train separately)
+*.pt
+*.pth
+*.joblib
+fdhn/checkpoints/
+
+# Local reading copies; source files are already in their original locations
+Project_Code_Reference/

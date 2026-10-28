@@ -1,0 +1,111 @@
+{
+  "model": "TF-IDF word unigram/bigram + balanced logistic regression",
+  "label_source": "Fakeddit 2-way label; distant supervision from subreddit, not human fact checking",
+  "score_interpretation": "predict_proba ranking score; not evaluated/calibrated as a real-world probability",
+  "threshold": 0.5,
+  "validation": {
+    "n": 1000,
+    "accuracy": 0.734,
+    "macro_f1": 0.7326138703036542,
+    "confusion_matrix_labels_0_1": [
+      [
+        331,
+        114
+      ],
+      [
+        152,
+        403
+      ]
+    ],
+    "false_positive_rate": 0.25617977528089886,
+    "false_negative_rate": 0.27387387387387385,
+    "fuzzy_outcome_counts_text_only": {
+      "Likely Real": 0,
+      "Likely Fake": 0,
+      "Needs Verification": 1000
+    },
+    "needs_verification_rate_text_only": 1.0,
+    "classification_report": {
+      "real_label_0": {
+        "precision": 0.6853002070393375,
+        "recall": 0.7438202247191011,
+        "f1-score": 0.7133620689655172,
+        "support": 445.0
+      },
+      "fake_label_1": {
+        "precision": 0.7794970986460348,
+        "recall": 0.7261261261261261,
+        "f1-score": 0.7518656716417911,
+        "support": 555.0
+      },
+      "accuracy": 0.734,
+      "macro avg": {
+        "precision": 0.7323986528426861,
+        "recall": 0.7349731754226136,
+        "f1-score": 0.7326138703036542,
+        "support": 1000.0
+      },
+      "weighted avg": {
+        "precision": 0.7375794818810546,
+        "recall": 0.734,
+        "f1-score": 0.7347315684508492,
+        "support": 1000.0
+      }
+    }
+  },
+  "test": {
+    "n": 1000,
+    "accuracy": 0.75,
+    "macro_f1": 0.749096748293858,
+    "confusion_matrix_labels_0_1": [
+      [
+        345,
+        100
+      ],
+      [
+        150,
+        405
+      ]
+    ],
+    "false_positive_rate": 0.2247191011235955,
+    "false_negative_rate": 0.2702702702702703,
+    "fuzzy_outcome_counts_text_only": {
+      "Likely Real": 0,
+      "Likely Fake": 0,
+      "Needs Verification": 1000
+    },
+    "needs_verification_rate_text_only": 1.0,
+    "classification_report": {
+      "real_label_0": {
+        "precision": 0.696969696969697,
+        "recall": 0.7752808988764045,
+        "f1-score": 0.7340425531914894,
+        "support": 445.0
+      },
+      "fake_label_1": {
+        "precision": 0.801980198019802,
+        "recall": 0.7297297297297297,
+        "f1-score": 0.7641509433962265,
+        "support": 555.0
+      },
+      "accuracy": 0.75,
+      "macro avg": {
+        "precision": 0.7494749474947495,
+        "recall": 0.7525053143030671,
+        "f1-score": 0.749096748293858,
+        "support": 1000.0
+      },
+      "weighted avg": {
+        "precision": 0.7552505250525052,
+        "recall": 0.75,
+        "f1-score": 0.7507527097551185,
+        "support": 1000.0
+      }
+    }
+  },
+  "split_sizes": {
+    "train": 6000,
+    "val": 1000,
+    "test": 1000
+  }
+}
